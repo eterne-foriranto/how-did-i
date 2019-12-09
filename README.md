@@ -1,2 +1,2 @@
 # how-did-i
-[Downgrade MariaDB]('./downgrade mariadb.md')
+[Downgrade MariaDB](./downgrade_mariadb.md)
