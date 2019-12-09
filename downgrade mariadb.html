@@ -1,0 +1,11 @@
+<p>Assuming, we&#39;ve already downgraded <code>mariadb*</code> packages.
+And we are faced with something like <code>ERROR: 1347 &#39;mysql.user&#39; is not of type &#39;BASE TABLE&#39;</code> when running installation script.
+Then one should change the file <code>/etc/mysql/my.cnf</code>:</p>
+<p>Put the line <code>skip-grant-tables</code> to the section <code>[mysqld]</code>.
+The [re]start mysqld and enter the mysql command prompt.</p>
+<pre><code>
+mysql&gt; drop database mysql;
+</code></pre><p>Remove the line <code>skip-grant-tables</code> from the section <code>[mysqld]</code>.</p>
+<p>Restart mysqld.</p>
+<p>Reissue installation script.</p>
+<p>Stages may be shuffled.</p>
